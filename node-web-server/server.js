@@ -42,7 +42,11 @@ app.get('/about', (req, res) => {
         pageTitle: 'About Page'
     });
 });
-
+app.get('/projects', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Projects'
+    })
+})
 app.get('/bad', (req, res) => {
     res.send({
         error: 'Unable to hand request'
